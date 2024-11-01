@@ -17,7 +17,7 @@ export const Banner = () => {
 				})}
 				duration={20}
 				delay={10 * index}
-				radius={index <= 1 ? 80 : 190}
+				radius={index <= 1 ? 80 : 180}
 				reverse={index > 1}
 			>
 				<Icon />
@@ -29,7 +29,7 @@ export const Banner = () => {
 
 	return (
 		<div className='relative flex h-[500px] min-h-screen w-full flex-col items-center justify-center rounded-lg'>
-			<h1 className='pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-background to-foreground bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-foreground dark:to-background'>
+			<h1 className='pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-background to-foreground bg-clip-text text-center text-7xl font-semibold leading-none text-transparent dark:from-foreground dark:to-background xl:text-8xl'>
 				{user.name}
 			</h1>
 
