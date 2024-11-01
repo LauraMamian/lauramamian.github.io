@@ -1,2 +1,6 @@
-export * from './banner/banner'
+export * from './about'
 export * from './achievements/achievements'
+export * from './banner/banner'
+export * from './courses'
+export * from './education'
+export * from './experience'

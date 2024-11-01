@@ -1,8 +1,11 @@
 import OrbitingCircles from '@/components/ui/orbiting-circles'
 import { Icons } from './icons'
 import clsx from 'clsx'
+import { getUserInfo } from '@/services'
 
 export const Banner = () => {
+	const user = getUserInfo()
+
 	const renderOrbitingCircles = () => {
 		const orbitingCircles = Object.values(Icons).map((Icon, index) => (
 			<OrbitingCircles
@@ -25,10 +28,16 @@ export const Banner = () => {
 	}
 
 	return (
-		<div className='relative flex h-[500px] min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl'>
-			<h1 className='pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black'>
-				Laura Mamián
+		<div className='relative flex h-[500px] min-h-screen w-full flex-col items-center justify-center rounded-lg'>
+			<h1 className='pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-background to-foreground bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-foreground dark:to-background'>
+				{user.name}
 			</h1>
+
+			{/* <div className='relative grid place-items-center'>
+				<h2 className='text-gradient z-10'>{user.name}</h2>
+				<h2 className='text-gradient absolute z-0 blur-xl'>{user.name}</h2>
+				<h2 className='text-gradient absolute blur-3xl'>{user.name}</h2>
+			</div> */}
 
 			{renderOrbitingCircles()}
 		</div>
