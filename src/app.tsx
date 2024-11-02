@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 
 function App() {
 	const { theme, themeIcon, toggleTheme } = useTheme()
-	
+
 	useEffect(() => {
 		const hash = window.location.hash
 		if (hash) {

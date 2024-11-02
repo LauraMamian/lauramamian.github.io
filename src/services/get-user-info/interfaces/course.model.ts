@@ -3,6 +3,6 @@ export type Course = {
 	name: string
 	institution: string
 	from: string | null
-	to: string 
+	to: string
 	link: string | null
 }
