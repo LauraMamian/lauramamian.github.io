@@ -9,6 +9,7 @@ import { TechSkill } from './tech.skill.model'
 
 export type IUser = {
 	name: string
+	alias: string
 	image: string
 	country: string
 	role: string

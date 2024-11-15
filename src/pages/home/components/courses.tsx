@@ -28,8 +28,7 @@ export const Courses = () => {
 					from={course.from}
 					to={course.to}
 					link={course.link}
-					// linkLabel={'View Certificate'}
-					linkLabel={''}
+					linkLabel={'View Certificate'}
 					title={course.name}
 					subtitle={course.institution}
 					icon={<BookTextIcon size={18} />}
@@ -48,6 +47,7 @@ export const Courses = () => {
 					size={18}
 					className='w-0 duration-200 group-hover:w-6'
 				/>
+
 				<BlurFade
 					delay={getDelay(0)}
 					inView

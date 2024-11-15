@@ -28,7 +28,7 @@ export const TimelineItem: React.FC<Props> = ({
 		}
 
 		if (from) {
-			return `${format(from, 'MMM, YYYY', 'en')} - Present`
+			return `${format(from, 'MMM, YYYY', 'en')} - Currently`
 		}
 
 		if (to) {
@@ -62,7 +62,10 @@ export const TimelineItem: React.FC<Props> = ({
 				)}
 
 				{link && linkLabel && (
-					<a href={link}>
+					<a
+						href={link}
+						target='_blank'
+					>
 						<Button
 							size={'sm'}
 							variant={'outline'}
