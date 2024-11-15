@@ -9,7 +9,6 @@ export const Banner = () => {
 		const orbitingCircles = Object.values(Icons).map((Icon, index) => {
 			const orbit = Math.floor(index / 3)
 			const positionInOrbit = index % 3
-
 			const radius = orbit === 0 ? 80 : 180
 			const size = orbit === 0 ? 'size-[30px]' : 'size-[70px]'
 			const delay = positionInOrbit * 6
